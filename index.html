@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <main class="main">
+
+    <div class="card">
+      <div class="card__circle"><img src="./images/icon-star.svg" alt="star image" class="card__star"></div>
+      <h1 class="card__heading">How did we do?</h1>
+      <p class="card__text">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <div class="card__circles-box">
+        <div class="card__circle card__circle--rating">
+          <p class="card__rate">1</p>
+        </div>
+        <div class="card__circle card__circle--rating">
+          <p class="card__rate">2</p>
+        </div>
+        <div class="card__circle card__circle--rating">
+          <p class="card__rate">3</p>
+        </div>
+        <div class="card__circle card__circle--rating">
+          <p class="card__rate">4</p>
+        </div>
+        <div class="card__circle card__circle--rating">
+          <p class="card__rate">5</p>
+        </div>
+      </div>
+      <button class="card__btn-submit">Submit</button>
+      <p class="card__error-msg"></p>
+    </div>
+
+    <div class="result">
+      <img src="./images/illustration-thank-you.svg" alt="Thank you image" class="result__img">
+      <p class="result__info"></p>
+      <h1 class="result__thankyou">Thank you!</h1>
+      <p class="result__text">We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">KatWita</a>.
+    </p>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

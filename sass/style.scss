@@ -1,0 +1,177 @@
+@use './colors' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.5rem;
+	font-family: 'Overpass', sans-serif;
+	background-color: $very-dark-blue;
+}
+
+/* --------------------------- */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	color: $medium-grey;
+}
+.attribution a {
+	color: $orange;
+}
+/* --------------------------- */
+
+.main,
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+	min-height: 100vh;
+	padding: 2em;
+}
+
+.card,
+.result {
+	max-width: $width;
+	background-color: $dark-blue;
+	color: $wight-grey;
+	border-radius: 14px;
+}
+
+.card {
+	padding: 1.7em 1.5em 2.2em;
+	height: $height;
+
+	&__circle {
+		position: relative;
+		width: $circle;
+		height: $circle;
+		background-color: $dark-blue2;
+		border-radius: 50%;
+
+		&--rating {
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				background-color: $orange;
+				color: $white;
+			}
+		}
+
+		&--active {
+			background-color: $medium-grey;
+			color: $white;
+		}
+	}
+
+	&__star,
+	&__rate {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__heading {
+		color: $white;
+		margin: 0.8em 0 0.6em;
+		font-size: 2.5rem;
+	}
+
+	&__text {
+		line-height: 21px;
+	}
+
+	&__circles-box {
+		display: flex;
+		justify-content: space-between;
+		gap: 1.3em;
+		margin: 2em 0 1.6em;
+	}
+
+	&__rate {
+		font-size: 1.4rem;
+	}
+
+	&__btn-submit {
+		padding: 1.2em 0;
+		width: 100%;
+		background-color: $orange;
+		color: $white;
+		border: none;
+		border-radius: 1000px;
+		font-weight: bold;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+
+		&:hover {
+			background-color: $white;
+			color: $orange;
+		}
+	}
+
+	&__error-msg {
+		color: $orange;
+		text-align: center;
+		margin-top: 0.5em;
+	}
+}
+
+.result {
+	display: none;
+	padding: 2.5em 1em 2.7em;
+	min-width: $width;
+	max-height: $height;
+	text-align: center;
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&__info {
+		display: inline-block;
+		padding: 0.5em 1em 0.3em;
+		margin: 1.6em 0 1.9em;
+		background-color: $dark-blue2;
+		color: $orange;
+		border-radius: 300px;
+	}
+
+	&__thankyou {
+		color: $white;
+		font-size: 2.5rem;
+		margin-bottom: 0.5em;
+	}
+
+	&__text {
+		line-height: 22px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.card,
+	.result {
+		max-width: $width-desktop;
+	}
+
+	.card {
+		padding: 1.7em 2.8em 2.2em 2.2em;
+	}
+
+	.result {
+		padding: 2.5em 2em 4em;
+	}
+}
